@@ -115,6 +115,8 @@ dist
 
 # production
 /build
+#.husky
+/.husky
 
 # misc
 .DS_Store
