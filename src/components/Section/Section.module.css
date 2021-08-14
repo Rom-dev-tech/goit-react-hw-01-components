@@ -1,0 +1,12 @@
+.section {
+  padding: 50px 0;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: underline;
+}
