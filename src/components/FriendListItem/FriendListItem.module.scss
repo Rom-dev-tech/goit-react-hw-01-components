@@ -1,0 +1,47 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  box-shadow: 10px 10px 5px 0px rgba(225, 225, 225, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(225, 225, 225, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(225, 225, 225, 0.75);
+  height: 8rem;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.status::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.true {
+  composes: status;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.false {
+  composes: status;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.avatar {
+  min-width: 100px;
+  height: 90%;
+  margin-left: 20px;
+  background-color: teal;
+  border-radius: 5px;
+}
+
+.name {
+  margin-left: 20px;
+  font-size: 32px;
+  font-weight: 700;
+}

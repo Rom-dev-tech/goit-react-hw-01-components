@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from '../Section/Section.module.css';
+import s from '../Section/Section.module.scss';
 
 const Section = ({ title, children }) => {
   return (

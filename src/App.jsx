@@ -1,43 +1,37 @@
-import PaintimgsList from './components/PaintingList/PaintingList';
-import Section from './components/Section/Section';
-import paintings from './paintings.json';
-import colorPickerOptions from './ColorPicker.json';
-import Alert from './components/Alert/Alert';
-import Container from './components/Container/Container';
-import ColorPicker from './components/ColorPicker/ColorPicker';
-import Box from './components/Box/Box';
-import Flex from './components/Flex/Flex';
+import Section from './UI/Section/Section';
+import Container from './UI/Container/Container';
+import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
+import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import user from './data/user.json';
+import statisticalData from './data/statistical-data.json';
+import friends from './data/friends.json';
+import transactions from './data/transactions.json';
 
 const App = () => {
   return (
     <>
-      <Section title="Cards">
+      <Section title="Profile">
         <Container>
-          <PaintimgsList items={paintings} />
+          <Profile
+            name={user.name}
+            tag={user.tag}
+            location={user.location}
+            avatar={user.avatar}
+            stats={user.stats}
+          />
         </Container>
       </Section>
-
-      <Section title="Alert">
+      <Statistics title="Upload stats" stats={statisticalData} />
+      <Section title="FriendList">
         <Container>
-          <Alert text="Шеф все пропало!" type="success" />
-          <Alert text="Шеф все пропало!" type="warning" />
-          <Alert text="Шеф все пропало!" type="error" />
+          <FriendList friends={friends} />
         </Container>
       </Section>
-
-      <Section title="ColorPicker">
+      <Section title="TransactionHistory">
         <Container>
-          <ColorPicker options={colorPickerOptions} />
-        </Container>
-      </Section>
-
-      <Section title="Box">
-        <Container>
-          <Flex>
-            <Box type="small" classNames="big red" styles={{ color: '#fff' }} />
-            <Box type="medium" />
-            <Box type="large" styles={{ color: 'tomato', fontSize: 40 }} />
-          </Flex>
+          <TransactionHistory items={transactions} />
         </Container>
       </Section>
     </>
